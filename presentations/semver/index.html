@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>SemVer</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/solarized.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>SemVer</h2>
+                    <hr />
+                    <h3>Семантическое версионирование</h3>
+                </section>
+                <section>
+                    <h3>Части номера версии пакета</h3>
+                    <hr />
+                    <h1>2.11.6</h1>
+                    <h4>major.minor.patch</h4>
+                </section>
+                <section>
+                    <h3>Patch</h3>
+                    <hr />
+                    <h1>2.11.<u>6</u></h1>
+                    <p>Изменения, не затрагивающие API пакета, например, багфиксы.<br />Не ломают обратную совместимость</p>
+                </section>
+                <section>
+                    <h3>Minor</h3>
+                    <hr />
+                    <h1>2.<u>11</u>.6</h1>
+                    <p>Изменения, добавляющие в пакет новые функции, но не затрагивающие текущее API.<br />Не ломают обратную совместимость</p>
+                </section>
+                <section>
+                    <h3>Major</h3>
+                    <hr />
+                    <h1><u>2</u>.11.6</h1>
+                    <p>Изменения в API, ломающие обратную совместимость (например, удаление каких-то функций)</p>
+                </section>
+                <section>
+                    <h3>Пример</h3>
+                    <hr />
+                    <img src="img/dependencies.png" />
+                </section>
+                <section>
+                    <h3>Спецификация</h3>
+                    <hr />
+                    <h3><a href="https://semver.org/lang/ru/" target="_blank">semver.org</a></h3>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+                transition: 'convex'
+            });
+        </script>
+    </body>
+</html>

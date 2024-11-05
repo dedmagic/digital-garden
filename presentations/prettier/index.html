@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>👍 GitHub - это круто!</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>GitHub</h1>
+				</section>
+				<section>
+					<h3>Хостинг репозиториев кода</h3>
+					<ul>
+						<li class="fragment fade-left">Независимость от компьютера</li>
+						<li class="fragment fade-left">Легко показать кому-нибудь свой код</li>
+						<li class="fragment fade-left">Абсолютно необходимо <s><font color="gray">на пьянках</font></s> при командной работе</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Issues</h3>
+					<ul>
+						<li>Чат</li>
+						<li>Workitem (ticket)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Нативная поддержка Markdown</h3>
+					<ul>
+						<li class="fragment fade-left">Ведение технической документации в проектах</li>
+						<li class="fragment fade-left">Свои блоги</li>
+					</ul>
+				</section>
+                <section>
+                    <h3>GitHub Pages:</h3>
+                    <h3>хостинг статичных сайтов</h3>
+                </section>
+				<section>
+					<h3>И многое другое</h3>
+					<ul>
+						<li>GitHub Actions</li>
+						<li>GitHub Projects (Kanban)</li>
+						<li>GitHub Gist</li>
+						<li>GitHub Codespaces</li>
+						<li>...</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Учебный процесс с использованием GitHub</h2>
+				</section>
+				<section>
+					<h3>Препод</h3>
+					<ol>
+						<li class="fragment fade-up">Один репозиторий на курс для публикации заданий (markdown!)</li>
+						<li class="fragment fade-up">
+							По одному <strong>issue</strong> на каждое ДЗ
+							<ul>
+								<li class="fragment fade-up">оповещение от препода о публикации ДЗ</li>
+								<li class="fragment fade-up">объявления от препода по этому ДЗ</li>
+								<li class="fragment fade-up">уточняющие вопросы от школяров по этому ДЗ</li>
+								<li class="fragment fade-up">оповещения от школяров о готовности ДЗ к проверке</li>
+							</ul>
+						</li>						
+					</ol>					
+				</section>
+				<section>
+					<h3>Школяры</h3>
+					<ol>
+						<li class="fragment fade-up">Один репозиторий на курс для выполнения заданий</li>
+						<li class="fragment fade-up">Каждое ДЗ выпоняется в отдельной ветке и вливается в <code>master</code> через PR</li>
+						<li class="fragment fade-up">Оповещение о готовности задания к проверке – в <strong>issue</strong> репозитория курса</li>
+						<li class="fragment fade-up">
+							Замечания от преподавателя
+							<ul>
+								<li class="fragment fade-up">комментарии в PR</li>
+								<li class="fragment fade-up">отдельный <strong>issue</strong> на каждое замечание</li>								
+							</ul>
+						</li>						
+					</ol>					
+				</section>
+				<section>
+					<h1>The End</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				transition: 'convex'
+			});
+		</script>
+	</body>
+</html>

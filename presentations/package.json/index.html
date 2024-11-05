@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>package.json</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/solarized.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>package.json</h2>                    
+                </section>
+                <section>
+                    <h3>Секция метаданных пакета</h3>
+                    <hr />
+                    <pre><code data-trim data-line-numbers>
+                            "name": "my_package",
+                            "description": "",
+                            "version": "1.0.0",
+                            "repository": {
+                                "type": "git",
+                                "url": "https://github.com/monatheoctocat/my_package.git",
+                                "keywords": [],
+                                "author": "",
+                                "license": "ISC",
+                                "bugs": {
+                                    "url": "https://github.com/monatheoctocat/my_package/issues"
+                            },
+                            "homepage": "https://github.com/monatheoctocat/my_package"
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Секция скриптов</h3>
+                    <hr />
+                    <pre><code class="json" data-trim data-line-numbers>
+                            "scripts": {
+                                "build": "tsc",
+                                "format": "prettier --write **/*.ts",
+                                "format-check": "prettier --check **/*.ts",
+                                "lint": "eslint src/**/*.ts",
+                                "pack": "ncc build",
+                                "test": "jest",
+                                "all": "npm run build && npm run format && npm run lint && npm run pack && npm test"
+                            }
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Секция <code>dependencies</code></h3>
+                    <hr />
+                    <pre><code class="json" data-trim data-line-numbers>
+                            "dependencies": {
+                                "my_dep": "~2.2.5",
+                                "another_dep": "^3.4.1",
+                                "one_more_dep": "1.0.0 - 1.2.0"
+                            }
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Секция <code>devDependencies</code></h3>
+                    <hr />
+                    <pre><code class="json" data-trim data-line-numbers>
+                            "devDependencies" : {
+                                "my_test_framework": "^3.1.0",
+                                "linter": "~1.2.0"
+                            }
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>package-lock.json</h3>
+                    <hr />
+                    <ol>
+                        <li>Для каждой установленной зависимости прописывается конкретная версия (та, которая была установлена).</li>
+                        <li>Для всех зависимостей прописываются их зависимости, причём происходит это рекурсивно.</li>
+                    </ol>
+                </section>
+                <section>
+                    <h1>The end</h1>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+                transition: 'convex'
+            });
+        </script>
+    </body>
+</html>
